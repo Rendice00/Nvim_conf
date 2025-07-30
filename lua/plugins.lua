@@ -10,7 +10,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     })
 end
 vim.opt.rtp:prepend(lazypath)
-
 require("lazy").setup({
     -- Lspconfig
     {
@@ -23,6 +22,9 @@ require("lazy").setup({
     -- Git integration
     {
         "tpope/vim-fugitive"
+    },
+    {
+        'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons'
     },
 
     -- Telesope

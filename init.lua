@@ -13,3 +13,6 @@ vim.api.nvim_set_hl(0, "VertSplit", { bg = "none" })
 vim.api.nvim_set_hl(0, 'LineNrAbove', { fg='#69616a', bold=true })
 vim.api.nvim_set_hl(0, 'LineNr', { fg='white', bold=true })
 vim.api.nvim_set_hl(0, 'LineNrBelow', { fg='#69616a', bold=true })
+vim.g.python3_host_prog = vim.fn.getcwd() .. '/.venv/bin/python'
+vim.opt.termguicolors = true
+require("bufferline").setup{}
