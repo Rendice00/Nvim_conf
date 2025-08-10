@@ -15,9 +15,13 @@ vim.keymap.set('n', '<C-j>', '<C-w>j', opts)
 vim.keymap.set('n', '<C-k>', '<C-w>k', opts)
 vim.keymap.set('n', '<C-l>', '<C-w>l', opts)
 
+
+
 -- Ex navigation
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>cd", vim.cmd.Ex)
+-- Show errors
+vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float)
 vim.api.nvim_set_keymap('n', '<leader>1', '<Cmd>BufferLineGoToBuffer 1<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>2', '<Cmd>BufferLineGoToBuffer 2<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<leader>3', '<Cmd>BufferLineGoToBuffer 3<CR>', { noremap = true, silent = true })

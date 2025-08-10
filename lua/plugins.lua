@@ -17,6 +17,13 @@ require("lazy").setup({
         config = function()
             local lspconfig = require("lspconfig")
             lspconfig.pylsp.setup({})
+            lspconfig.html.setup({
+              settings = {
+                html = {
+                  validate = true,
+                },
+              },
+            })
         end,
     },
     -- Git integration
@@ -54,7 +61,7 @@ require("lazy").setup({
             "neovim/nvim-lspconfig",
         },
         opts = {
-            ensure_installed = { "pylsp", "lua_ls" },
+            ensure_installed = { "pylsp", "lua_ls","html","tailwindcss" },
         },
     },
     -- Colorscheme
